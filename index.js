@@ -6,7 +6,7 @@ var extend = require('xtend')
 var assert = require('assert-ok')
 var dezalgo = require('dezalgo')
 var Listeners = require('ear')
-var setQuery = require('url-set-query')
+var extendQuery = require('query-extend')
 var cuid = require('cuid')
 
 module.exports = loadGlobal
@@ -31,7 +31,7 @@ function loadGlobal (options, callback) {
 
   if (options.jsonp) {
     var id = jsonpCallback(options, callback)
-    options.url = setQuery(options.url, 'callback=' + id)
+    options.url = extendQuery(options.url, {callback: id})
   }
 
   load(options.url, options, function (err) {

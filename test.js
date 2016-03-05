@@ -39,7 +39,7 @@ test('jsonp', function (t) {
   })
 
   var options = {
-    url: 'theUrl',
+    url: 'theUrl?param=val',
     global: 'theGlobal',
     jsonp: true
   }
@@ -53,7 +53,7 @@ test('jsonp', function (t) {
   })
 
   var script = document.getElementsByTagName('script')[0]
-  t.equal(script.src, 'theUrl?callback=theCuid')
+  t.equal(script.src, 'theUrl?param=val&callback=theCuid')
 
   window.theGlobal = {}
   script.onload()

@@ -34,7 +34,7 @@
     "ear": "~1.0.1",
     "global": "~4.3.0",
     "load-script": "~1.0.0",
-    "url-set-query": "~1.0.0",
+    "query-extend": "~0.2.0",
     "xtend": "~4.0.1"
   }
 }
