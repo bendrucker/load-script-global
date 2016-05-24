@@ -79,6 +79,24 @@ test('errors', function (t) {
   script.onerror()
 })
 
+test('global not found', function (t) {
+  t.plan(2)
+
+  var window = {}
+  var load = proxyquire('./', {
+    'global/window': window
+  })
+
+  load({url: 'theUrl', global: 'theGlobal'}, function (err, lib) {
+    t.ok(err)
+    t.equal(err.message, 'expected: `window.theGlobal`, actual: `undefined`')
+    script.parentNode.removeChild(script)
+  })
+
+  var script = document.getElementsByTagName('script')[0]
+  script.onload()
+})
+
 test('existing global', function (t) {
   t.plan(2)
 

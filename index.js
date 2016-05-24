@@ -36,7 +36,11 @@ function loadGlobal (options, callback) {
 
   load(options.url, options, function (err) {
     if (err) return callback(err)
-    if (!options.jsonp) callback(null, getGlobal(options))
+    if (!options.jsonp) {
+      var library = getGlobal(options)
+      if (!library) return callback(new Error('expected: `window.' + options.global + '`, actual: `' + library + '`'))
+      callback(null, library)
+    }
   })
 }
 
