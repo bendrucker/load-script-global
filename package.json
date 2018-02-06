@@ -20,8 +20,8 @@
     "browser"
   ],
   "devDependencies": {
-    "proxyquire": "~1.7.4",
-    "standard": "~6.0.7",
+    "proxyquire": "~1.8.0",
+    "standard": "~10.0.3",
     "tape": "^4.0.0"
   },
   "files": [
