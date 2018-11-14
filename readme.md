@@ -1,4 +1,4 @@
-# load-script-global [![Build Status](https://travis-ci.org/bendrucker/load-script-global.svg?branch=master)](https://travis-ci.org/bendrucker/load-script-global)
+# load-script-global [![Build Status](https://travis-ci.org/bendrucker/load-script-global.svg?branch=master)](https://travis-ci.org/bendrucker/load-script-global) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/load-script-global.svg)](https://greenkeeper.io/)
 
 > Load a global library via a script tag
 
