@@ -1,7 +1,7 @@
 {
   "name": "load-script-global",
   "main": "index.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Load a global library via a script tag",
   "license": "MIT",
   "repository": "bendrucker/load-script-global",
